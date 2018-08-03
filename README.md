@@ -14,3 +14,6 @@
 
 ## 启动服务
 `python manager.py runserver 8080`
+
+## 创建管理员
+`python manager.py createsuperuser`
