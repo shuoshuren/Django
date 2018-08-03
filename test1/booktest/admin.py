@@ -3,6 +3,10 @@ from .models import BookInfo, HeroInfo
 
 
 # Register your models here.
+class HeroInfoInline(admin.TabularInline):
+    model = HeroInfo
+    extra = 3
+
 
 class BookInfoAdmin(admin.ModelAdmin):
     # 展示列表
@@ -18,6 +22,8 @@ class BookInfoAdmin(admin.ModelAdmin):
         ('base', {'fields': ['btitle']}),
         ('super', {'fields': ['bpub_date']})
     ]
+    # 关联注册
+    inlines = [HeroInfoInline]
 
 
 admin.site.register(BookInfo, BookInfoAdmin)
