@@ -7,13 +7,13 @@
 `django-admin startapp booktest`
 
 ## 生成迁移
-`python manager.py makemigrations`
+`python manage.py makemigrations`
 
 ## 迁移
-`python manager.py migrate`
+`python manage.py migrate`
 
 ## 启动服务
-`python manager.py runserver 8080`
+`python manage.py runserver 8080`
 
 ## 创建管理员
-`python manager.py createsuperuser`
+`python manage.py createsuperuser`

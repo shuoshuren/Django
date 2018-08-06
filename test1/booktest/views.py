@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import *
+from .models import *
 # from django.template import RequestContext,loader
 
 
@@ -8,4 +9,6 @@ from django.http import *
 def index(request):
     # temp = loader.get_template('booktest/index.html')
     # return HttpResponse(temp.render())
-    return render(request,'booktest/index.html')
+    booklist = BookInfo.objects.all()
+    context = {'list':booklist}
+    return render(request,'booktest/index.html',context)

@@ -5,6 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-<h>Hello world,book</h>
+<ul>
+{% for book in list %}
+<li>{{book.btitle}}</li>
+{%endfor%}
+</ul>
 </body>
 </html>
