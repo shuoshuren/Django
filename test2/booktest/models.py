@@ -5,6 +5,15 @@ class BookInfoManager(models.Manager):
     def get_queryset(self):
         return super(BookInfoManager,self).get_queryset().filter(isDelete=False)
 
+    def create(self,btitile,bpub_date):
+        b = BookInfo()
+        b.btitle = btitile
+        b.bpub_date = bpub_date
+        b.bread = 0
+        b.bcommet = 0
+        b.isDelete = False
+        return b
+
 
 class BookInfo(models.Model):
     btitle = models.CharField(max_length=20)
@@ -26,6 +35,16 @@ class BookInfo(models.Model):
     '''
     books = models.Manager()
     books2 = BookInfoManager()
+
+    @classmethod
+    def create(cls,btitile,bpub_date):
+        b = BookInfo()
+        b.btitle = btitile
+        b.bpub_date = bpub_date
+        b.bread = 0
+        b.bcommet = 0
+        b.isDelete = False
+        return b
 
 
 class HeroInfo(models.Model):
