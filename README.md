@@ -98,6 +98,27 @@
 `re_path(r'^(?P<id>[0-9]+)/$',views.detail,name='detail')`
 * 参数匹配规则：优先使用命名参数，如果没有命名参数则使用位置参数，捕获的参数作为字符串传递给视图
 
+### Request
+> * 属性
+* path:表示请求的页面完整路径，不包含域名
+* method:表示请求的HTTP方法
+* encoding:一个字符串，表示请求的数据的编码方式
+* GET:一个类似字典的对象，包含get请求方式的所有参数
+* POST:一个类似字典的对象，包含post请求方式的所有参数
+* FILES:一个类似字典的对象，包含所有上传文件
+* COOKIES: 一个字典，包含所有cookie,键和值都为字符串
+* session:一个可读写的字典对象，表示当前回话，当django启用支持时，才可用
+
+> * 方法
+* is_ajax():如果请求是通过XMLHttpRequest发起，则返回true
+
+### QueryDict对象
+* request对象属性GET,POST都是QueryDict对象
+* get():根据键获取值，如果一个键有多个值，则获取最后一个
+`dict.get('键',default)`或简写为`dict['键']`
+* getlist():根据键获取值，将键的值以列表返回，可以获取一个键多个值
+`dict.getlist('键',default)`
+
 
 
 
