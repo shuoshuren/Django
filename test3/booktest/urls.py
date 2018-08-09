@@ -11,5 +11,8 @@ urlpatterns = [
     re_path(r'^getTest3$',views.getTest3),
     re_path(r'^postTest1$',views.postTest1),
     re_path(r'^postTest2$',views.postTest2),
+    re_path(r'^cookieTest$',views.cookieTest),
+    re_path(r'^redTest1$',views.redTest1),
+    re_path(r'^redTest2$',views.redTest2),
     re_path(r'^(?P<month>\d+)/(?P<year>\d+)/(?P<day>\d+)/$',views.detail)
 ]

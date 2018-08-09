@@ -119,6 +119,16 @@
 * getlist():根据键获取值，将键的值以列表返回，可以获取一个键多个值
 `dict.getlist('键',default)`
 
+### Response对象
+* init():使用页面内容实例化HttpResponse对象
+* write(content):以文件的方式写
+* flush():以文件的方式输出缓存区
+* set_cookie(key,value='',max_age=None,expires=None):设置cookie
+* delete_cookie(key):删除cookie
+
+### HttpResponseRedirect对象
+重定向，服务器跳转，构造函数的第一个参数用来指定重定向的地址
+
 
 
 
