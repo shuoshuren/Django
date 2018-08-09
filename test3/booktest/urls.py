@@ -9,5 +9,7 @@ urlpatterns = [
     re_path(r'^getTest1$',views.getTest1),
     re_path(r'^getTest2$',views.getTest2),
     re_path(r'^getTest3$',views.getTest3),
+    re_path(r'^postTest1$',views.postTest1),
+    re_path(r'^postTest2$',views.postTest2),
     re_path(r'^(?P<month>\d+)/(?P<year>\d+)/(?P<day>\d+)/$',views.detail)
 ]
